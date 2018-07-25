@@ -1,0 +1,9 @@
+C:\codes\bancomer-dotnet\Bancomer\bin\Debug\Bancomer.dll
+C:\codes\bancomer-dotnet\Bancomer\bin\Debug\Bancomer.pdb
+C:\codes\bancomer-dotnet\Bancomer\bin\Debug\Newtonsoft.Json.dll
+C:\codes\bancomer-dotnet\Bancomer\bin\Debug\Newtonsoft.Json.xml
+C:\codes\bancomer-dotnet\Bancomer\obj\Debug\Bancomer.csprojAssemblyReference.cache
+C:\codes\bancomer-dotnet\Bancomer\obj\Debug\Bancomer.csproj.CoreCompileInputs.cache
+C:\codes\bancomer-dotnet\Bancomer\obj\Debug\Bancomer.csproj.CopyComplete
+C:\codes\bancomer-dotnet\Bancomer\obj\Debug\Bancomer.dll
+C:\codes\bancomer-dotnet\Bancomer\obj\Debug\Bancomer.pdb
