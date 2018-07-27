@@ -7,16 +7,16 @@ using Bancomer.Entities.Request;
 
 namespace Bancomer
 {
-    public class ChargeTokenService : BancomerResourceService<ChargeTokenRequest, Charge>
+    public class ChargeService : BancomerResourceService<ChargeTokenRequest, Charge>
     {
 
-        public ChargeTokenService(string api_key, string merchant_id, bool production = false)
+        public ChargeService(string api_key, string merchant_id, bool production = false)
             : base(api_key, merchant_id, production)
         {
             ResourceName = "charges";
         }
 
-        internal ChargeTokenService(BancomerHttpClient opHttpClient)
+        internal ChargeService(BancomerHttpClient opHttpClient)
             : base(opHttpClient)
         {
             ResourceName = "charges";

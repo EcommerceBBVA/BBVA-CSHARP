@@ -32,12 +32,12 @@ namespace BancomerTest
             
             request.Add(GetCustomer());
             
-            Charge charge = bancomerAPI.ChargeTokenService.Create(request);
+            Charge charge = bancomerAPI.ChargeService.Create(request);
             Assert.IsNull(charge.CardPoints);
             Assert.IsNotNull(charge);
             Assert.IsNotNull(charge.Id);
 
-            Charge charge2 = bancomerAPI.ChargeTokenService.Get(charge.Id);
+            Charge charge2 = bancomerAPI.ChargeService.Get(charge.Id);
             Assert.IsNotNull(charge2);
             Assert.IsNull(charge2.CardPoints);
             Assert.AreEqual(charge.Id, charge2.Id);
@@ -64,11 +64,11 @@ namespace BancomerTest
                 new SingleParameter("order_id", "oid-00051")
             };
             
-            Charge charge = bancomerAPI.ChargeTokenService.Create(request);
+            Charge charge = bancomerAPI.ChargeService.Create(request);
             Assert.IsNotNull(charge);
             Assert.IsNotNull(charge.Id);
 
-            Charge refund = bancomerAPI.ChargeTokenService.Refund(charge.Id, "Merchant Refund", new Decimal(200.00));
+            Charge refund = bancomerAPI.ChargeService.Refund(charge.Id, "Merchant Refund", new Decimal(200.00));
             Assert.IsNotNull(refund);
             Assert.IsNotNull(refund.Refund);
         }

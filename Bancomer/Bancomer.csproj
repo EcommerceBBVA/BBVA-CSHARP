@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChargeService.cs" />
-    <Compile Include="ChargeTokenService.cs" />
     <Compile Include="CustomerService.cs" />
     <Compile Include="MerchantService.cs" />
     <Compile Include="BancomerGenericService.cs" />

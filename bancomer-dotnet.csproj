@@ -123,7 +123,7 @@
     <Compile Include="Bancomer\BancomerGenericService.cs" />
     <Compile Include="Bancomer\BancomerHttpClient.cs" />
     <Compile Include="Bancomer\BancomerResourceService.cs" />
-    <Compile Include="Bancomer\ChargeTokenService.cs" />
+    <Compile Include="Bancomer\ChargeService.cs" />
     <Compile Include="Bancomer\Entities\Address.cs" />
     <Compile Include="Bancomer\Entities\Affiliation.cs" />
     <Compile Include="Bancomer\Entities\BancomerResourceObject.cs" />

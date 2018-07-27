@@ -33,12 +33,12 @@ namespace BancomerNUnitTests
                 GetCustomer()
             };
 
-			Charge charge = bancomerAPI.ChargeTokenService.Create(request);
+			Charge charge = bancomerAPI.ChargeService.Create(request);
 			Assert.IsNotNull(charge);
 			Assert.IsNotNull(charge.Id);
 			Assert.IsNotNull(charge.CreationDate);
 
-			Charge chargeFound = bancomerAPI.ChargeTokenService.Get(charge.Id);
+			Charge chargeFound = bancomerAPI.ChargeService.Get(charge.Id);
 			Assert.IsNotNull(chargeFound);
 		}
         
@@ -64,7 +64,7 @@ namespace BancomerNUnitTests
                 GetCustomer()
             };
 
-            Charge charge = bancomerAPI.ChargeTokenService.Create(request);
+            Charge charge = bancomerAPI.ChargeService.Create(request);
 			Assert.IsNotNull(charge);
 			Assert.IsNotNull(charge.Id);
 			Assert.IsNotNull(charge.CreationDate);
@@ -94,7 +94,7 @@ namespace BancomerNUnitTests
                 GetCustomer()
             };
 
-            Charge charge = bancomerAPI.ChargeTokenService.Create(request);
+            Charge charge = bancomerAPI.ChargeService.Create(request);
 			Assert.IsNotNull(charge);
 			Assert.IsNotNull(charge.Id);
 			Assert.IsNotNull(charge.CreationDate);
@@ -102,7 +102,7 @@ namespace BancomerNUnitTests
 
 			string description = "reembolso desce .Net de " + amount;
 
-			Charge refund = bancomerAPI.ChargeTokenService.Refund(charge.Id, description, amount);
+			Charge refund = bancomerAPI.ChargeService.Refund(charge.Id, description, amount);
 
 			Assert.IsNotNull(refund);
 			Assert.IsNotNull(refund.Id);
@@ -131,13 +131,13 @@ namespace BancomerNUnitTests
                 GetCustomer()
             };
 
-            Charge charge = bancomerAPI.ChargeTokenService.Create(request);
+            Charge charge = bancomerAPI.ChargeService.Create(request);
             Assert.IsNotNull(charge);
             Assert.IsNotNull(charge.Id);
             Assert.IsNotNull(charge.CreationDate);
             Assert.AreEqual("in_progress", charge.Status);
 
-            Charge chargeCompleted = bancomerAPI.ChargeTokenService.Capture(charge.Id, amount);
+            Charge chargeCompleted = bancomerAPI.ChargeService.Capture(charge.Id, amount);
             Assert.IsNotNull(chargeCompleted);
             Assert.AreEqual("completed", chargeCompleted.Status);
             Assert.AreEqual(charge.Amount, chargeCompleted.Amount);
