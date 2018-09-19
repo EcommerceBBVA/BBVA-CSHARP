@@ -15,16 +15,15 @@ namespace BancomerTest
         public void TestMerchant_Get()
         {
             BancomerAPI bancomerAPI = new BancomerAPI(Constants.API_KEY, Constants.MERCHANT_ID);
-            Merchant merchant = bancomerAPI.MerchantService.Get();
+            Dictionary<String, Object> merchantDictionary = bancomerAPI.MerchantService.Get();
+            ParameterContainer merchant = new ParameterContainer("merchant", merchantDictionary);
             Assert.IsNotNull(merchant);
-            Assert.IsNotNull(merchant.Name);
-            Assert.IsNotNull(merchant.Email);
-            Assert.IsNotNull(merchant.CreationDate);
-            Assert.IsNotNull(merchant.Status);
-            Assert.IsNull(merchant.CLABE);
-            Assert.IsNotNull(merchant.Phone);
-            Assert.IsTrue(merchant.Balance.CompareTo(1000.00M) > 0);
-            Assert.IsTrue(merchant.AvailableFunds.CompareTo(1000.00M) > 0);
+            Assert.IsNotNull(merchant.GetSingleValue("name").ParameterValue);
+            Assert.IsNotNull(merchant.GetSingleValue("email").ParameterValue);
+            Assert.IsNotNull(merchant.GetSingleValue("creation_date").ParameterValue);
+            Assert.IsNotNull(merchant.GetSingleValue("status").ParameterValue);
+            Assert.IsNull(merchant.GetSingleValue("clabe").ParameterValue);
+            Assert.IsNotNull(merchant.GetSingleValue("phone").ParameterValue);
         }
 
     }

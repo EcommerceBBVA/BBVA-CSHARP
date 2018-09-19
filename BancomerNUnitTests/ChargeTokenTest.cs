@@ -16,9 +16,10 @@ namespace BancomerNUnitTests
 		{
 			BancomerAPI bancomerAPI = new BancomerAPI(Constants.API_KEY, Constants.MERCHANT_ID);
 			Decimal amount = new Decimal(200.00);
-			
-			Token token = bancomerAPI.TokenService.Create(GetTokenRequest());
-            
+
+            Dictionary<String, Object> tokenDictionary = bancomerAPI.TokenService.Create(GetTokenRequest());
+            ParameterContainer token = new ParameterContainer("token", tokenDictionary);
+
             List<IParameter> request = new List<IParameter> {
                 new SingleParameter("affiliation_bbva", "720931"),
                 new SingleParameter("amount", "200.00"),
@@ -27,19 +28,21 @@ namespace BancomerNUnitTests
                 new SingleParameter("capture", "false"),
                 new SingleParameter("use_3d_secure", "false"),
                 new SingleParameter("use_card_points", "NONE"),
-                new SingleParameter("token", token.Id),
+                new SingleParameter("token", token.GetSingleValue("id").ParameterValue),
                 new SingleParameter("currency", "MXN"),
                 new SingleParameter("order_id", "oid-00051"),
                 GetCustomer()
             };
 
-			Charge charge = bancomerAPI.ChargeService.Create(request);
+            Dictionary<String, Object> chargeDictionary = bancomerAPI.ChargeService.Create(request);
+            ParameterContainer charge = new ParameterContainer("charge", chargeDictionary);
 			Assert.IsNotNull(charge);
-			Assert.IsNotNull(charge.Id);
-			Assert.IsNotNull(charge.CreationDate);
+            String chargeId = charge.GetSingleValue("id").ParameterValue;
 
-			Charge chargeFound = bancomerAPI.ChargeService.Get(charge.Id);
-			Assert.IsNotNull(chargeFound);
+            chargeDictionary = bancomerAPI.ChargeService.Get(chargeId);
+            charge = new ParameterContainer("charge", chargeDictionary);
+			Assert.IsNotNull(charge);
+            Assert.IsNotNull(charge.GetSingleValue("id").ParameterValue);
 		}
         
 		[Test()]
@@ -48,7 +51,8 @@ namespace BancomerNUnitTests
 			BancomerAPI bancomerAPI = new BancomerAPI(Constants.API_KEY, Constants.MERCHANT_ID);
 			Decimal amount = new Decimal(200.00);
 
-			Token token = bancomerAPI.TokenService.Create(GetTokenRequest());
+            Dictionary<String, Object> tokenDictionary = bancomerAPI.TokenService.Create(GetTokenRequest());
+            ParameterContainer token = new ParameterContainer("token", tokenDictionary);
 
             List<IParameter> request = new List<IParameter> {
                 new SingleParameter("affiliation_bbva", "720931"),
@@ -58,16 +62,15 @@ namespace BancomerNUnitTests
                 new SingleParameter("capture", "false"),
                 new SingleParameter("use_3d_secure", "false"),
                 new SingleParameter("use_card_points", "NONE"),
-                new SingleParameter("token", token.Id),
+                new SingleParameter("token", token.GetSingleValue("id").ParameterValue),
                 new SingleParameter("currency", "MXN"),
                 new SingleParameter("order_id", "oid-00051"),
                 GetCustomer()
             };
 
-            Charge charge = bancomerAPI.ChargeService.Create(request);
+            Dictionary<String, Object> chargeDictionary = bancomerAPI.ChargeService.Create(request);
+            ParameterContainer charge = new ParameterContainer("charge", chargeDictionary);
 			Assert.IsNotNull(charge);
-			Assert.IsNotNull(charge.Id);
-			Assert.IsNotNull(charge.CreationDate);
 		}
 
 		[Test()]
@@ -77,8 +80,9 @@ namespace BancomerNUnitTests
 			BancomerAPI bancomerAPI = new BancomerAPI(Constants.NEW_API_KEY, Constants.NEW_MERCHANT_ID);
 
 			Decimal amount = new Decimal(200.00);
-			
-			Token token = bancomerAPI.TokenService.Create(GetTokenRequest());
+
+            Dictionary<String, Object> tokenDictionary = bancomerAPI.TokenService.Create(GetTokenRequest());
+            ParameterContainer token = new ParameterContainer("token", tokenDictionary);
 
             List<IParameter> request = new List<IParameter> {
                 new SingleParameter("affiliation_bbva", "720931"),
@@ -88,26 +92,20 @@ namespace BancomerNUnitTests
                 new SingleParameter("capture", "TRUE"),
                 new SingleParameter("use_3d_secure", "FALSE"),
                 new SingleParameter("use_card_points", "NONE"),
-                new SingleParameter("token", token.Id),
+                new SingleParameter("token", token.GetSingleValue("id").ParameterValue),
                 new SingleParameter("currency", "MXN"),
                 new SingleParameter("order_id", "oid-00051"),
                 GetCustomer()
             };
 
-            Charge charge = bancomerAPI.ChargeService.Create(request);
-			Assert.IsNotNull(charge);
-			Assert.IsNotNull(charge.Id);
-			Assert.IsNotNull(charge.CreationDate);
-			Assert.AreEqual("completed", charge.Status);
+            Dictionary<String, Object> chargeDictionary = bancomerAPI.ChargeService.Create(request);
+            ParameterContainer charge = new ParameterContainer("charge", chargeDictionary);
+            Assert.IsNotNull(charge);
 
 			string description = "reembolso desce .Net de " + amount;
 
-			Charge refund = bancomerAPI.ChargeService.Refund(charge.Id, description, amount);
-
+            Dictionary<String, Object> refund = bancomerAPI.ChargeService.Refund(charge.GetSingleValue("id").ParameterValue, description, amount);
 			Assert.IsNotNull(refund);
-			Assert.IsNotNull(refund.Id);
-			Assert.IsNotNull(refund.CreationDate);
-			Assert.AreEqual("completed", refund.Status);
 		}
 
 		[Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod]
@@ -115,7 +113,8 @@ namespace BancomerNUnitTests
         {
             BancomerAPI bancomerAPI = new BancomerAPI(Constants.API_KEY, Constants.MERCHANT_ID);
             Decimal amount = new Decimal(200.00);
-			Token token = bancomerAPI.TokenService.Create(GetTokenRequest());
+            Dictionary<String, Object> tokenDictionary = bancomerAPI.TokenService.Create(GetTokenRequest());
+            ParameterContainer token = new ParameterContainer("token", tokenDictionary);
 
             List<IParameter> request = new List<IParameter> {
                 new SingleParameter("affiliation_bbva", "720931"),
@@ -125,41 +124,43 @@ namespace BancomerNUnitTests
                 new SingleParameter("capture", "FALSE"),
                 new SingleParameter("use_3d_secure", "FALSE"),
                 new SingleParameter("use_card_points", "NONE"),
-                new SingleParameter("token", token.Id),
+                new SingleParameter("token", token.GetSingleValue("id").ParameterValue),
                 new SingleParameter("currency", "MXN"),
                 new SingleParameter("order_id", "oid-00051"),
                 GetCustomer()
             };
 
-            Charge charge = bancomerAPI.ChargeService.Create(request);
+            Dictionary<String, Object> chargeDictionary = bancomerAPI.ChargeService.Create(request);
+            ParameterContainer charge = new ParameterContainer("charge", chargeDictionary);
             Assert.IsNotNull(charge);
-            Assert.IsNotNull(charge.Id);
-            Assert.IsNotNull(charge.CreationDate);
-            Assert.AreEqual("in_progress", charge.Status);
+            Assert.IsNotNull(charge.GetSingleValue("id").ParameterValue);
+            Assert.IsNotNull(charge.GetSingleValue("creation_date").ParameterValue);
+            Assert.AreEqual("in_progress", charge.GetSingleValue("status").ParameterValue);
 
-            Charge chargeCompleted = bancomerAPI.ChargeService.Capture(charge.Id, amount);
+            Dictionary<String, Object> chargeCompletedDict = bancomerAPI.ChargeService.Capture(charge.GetSingleValue("id").ParameterValue, amount);
+            ParameterContainer chargeCompleted = new ParameterContainer("charge", chargeCompletedDict);
             Assert.IsNotNull(chargeCompleted);
-            Assert.AreEqual("completed", chargeCompleted.Status);
-            Assert.AreEqual(charge.Amount, chargeCompleted.Amount);
+            Assert.AreEqual("completed", charge.GetSingleValue("status").ParameterValue);
+            Assert.AreEqual(charge.GetSingleValue("amount").ParameterValue, chargeCompleted.GetSingleValue("amount").ParameterValue);
         }
 
-		private ParameterContainer GetCustomer()
+        private ParameterContainer GetCustomer()
 		{
             ParameterContainer address = new ParameterContainer("address");
-            address.addValue("line1", "Calle Morelos #12 - 11");
-            address.addValue("line2", "Colonia Centro");           // Optional
-            address.addValue("line3", "Cuauhtémoc");               // Optional
-            address.addValue("city", "Queretaro");
-            address.addValue("postal_code", "12345");
-            address.addValue("state", "Queretaro");
-            address.addValue("country_code", "MX");
+            address.AddValue("line1", "Calle Morelos #12 - 11");
+            address.AddValue("line2", "Colonia Centro");           // Optional
+            address.AddValue("line3", "Cuauhtémoc");               // Optional
+            address.AddValue("city", "Queretaro");
+            address.AddValue("postal_code", "12345");
+            address.AddValue("state", "Queretaro");
+            address.AddValue("country_code", "MX");
 
             ParameterContainer customer = new ParameterContainer("customer");
-            customer.addValue("name", "John");
-            customer.addValue("last_name", "Doe");
-            customer.addValue("email", "johndoe@example.com");
-            customer.addValue("phone_number", "554-170-3567");
-            customer.addMultiValue(address);
+            customer.AddValue("name", "John");
+            customer.AddValue("last_name", "Doe");
+            customer.AddValue("email", "johndoe@example.com");
+            customer.AddValue("phone_number", "554-170-3567");
+            customer.AddMultiValue(address);
             return customer;
 		}
 

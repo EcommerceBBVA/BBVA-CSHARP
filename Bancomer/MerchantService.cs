@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Bancomer
 {
-    public class MerchantService : BancomerResourceService<Merchant, Merchant>
+    public class MerchantService : BancomerResourceService<Merchant, Dictionary<String, Object>>
     {
 
         public MerchantService(string api_key, string merchant_id, bool production = false)
@@ -23,7 +23,7 @@ namespace Bancomer
             ResourceName = "";
         }
 
-        public Merchant Get()
+        public Dictionary<String, Object> Get()
         {
             return base.Get(null, null);
         }

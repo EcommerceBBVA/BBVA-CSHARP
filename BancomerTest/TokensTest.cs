@@ -20,18 +20,24 @@ namespace BancomerTest
 		{
 			BancomerAPI bancomerAPI = new BancomerAPI(Constants.API_KEY, Constants.MERCHANT_ID);
             List<IParameter> request = new List<IParameter>{
-                new SingleParameter("holder_nane", "Juan Perez Ramirez"),
+                new SingleParameter("holder_name", "Juan Perez Ramirez"),
                 new SingleParameter("card_number", "4111111111111111"),
                 new SingleParameter("cvv2", "022"),
                 new SingleParameter("expiration_month", "12"),
                 new SingleParameter("expiration_year", "20"),
             };
 
-            Token tokenCreated = bancomerAPI.TokenService.Create(request);
-			Assert.IsNotNull(tokenCreated.Id);
+            Dictionary<String, Object> tokenDictionary = bancomerAPI.TokenService.Create(request);
+            ParameterContainer token = new ParameterContainer("token", tokenDictionary);
+            Assert.IsNotNull(token);
+            String tokenId = token.GetSingleValue("id").ParameterValue;
+            Assert.IsNotNull(tokenId);
+            Assert.IsNotNull(token.GetContainerValue("card"));
 
-			Token tokenGet = bancomerAPI.TokenService.Get(tokenCreated.Id);
-			Assert.IsNotNull(tokenGet.Id);
+            tokenDictionary = bancomerAPI.TokenService.Get(tokenId);
+            token = new ParameterContainer("token", tokenDictionary);
+			Assert.IsNotNull(token);
+            Assert.AreEqual(tokenId, token.GetSingleValue("id").ParameterValue);
 		}
 
 		private string GetResponseAsString(WebResponse response)

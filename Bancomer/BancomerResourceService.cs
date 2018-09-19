@@ -5,12 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace Bancomer
 {
     public abstract class BancomerResourceService<T, R>
         where T : JsonObject
-        where R : BancomerResourceObject
+        where R : Dictionary<string, object>
     {
         protected BancomerHttpClient httpClient;
 
@@ -52,16 +53,16 @@ namespace Bancomer
             return this.httpClient.Post<R>(ep, obj);
         }
 
-        protected R Update(string customer_id, R obj)
+        /*protected R Update(string customer_id, R obj)
         {
-            if (String.IsNullOrEmpty(obj.Id))
-                throw new ArgumentNullException("resource_id");
+            //if (id == null)
+            //    throw new ArgumentNullException("The id of the object cannot be null");
             if (obj == null)
                 throw new ArgumentNullException("Object is null");
 
-            string ep = GetEndPoint(customer_id, obj.Id);
+            string ep = GetEndPoint(customer_id, id);
             return this.httpClient.Put<R>(ep, obj);
-        }
+        }*/
 
         protected virtual void Delete(string customer_id, string resource_id)
         {

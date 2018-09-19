@@ -26,11 +26,11 @@ namespace BancomerNUnitTests
                 new SingleParameter("expiration_year", "20"),
             };
 
-            Token token = bancomerAPI.TokenService.Create(request);
-
-			Assert.IsNotNull(token);
-			Assert.IsNotNull(token.Id);
-		}
+            Dictionary<String, Object> tokenObj = bancomerAPI.TokenService.Create(request);
+            ParameterContainer tokenCreated = new ParameterContainer("token", tokenObj);
+            Assert.IsNotNull(tokenCreated);
+            Assert.IsNotNull(tokenCreated.GetSingleValue("id").ParameterValue);
+        }
         
 		[Test()]
 		public void TestGetToken()
@@ -44,11 +44,12 @@ namespace BancomerNUnitTests
                 new SingleParameter("expiration_year", "20"),
             };
 
-            Token tokenCreated = bancomerAPI.TokenService.Create(request);
-			Assert.IsNotNull(tokenCreated.Id);
+            Dictionary<String, Object> tokenObj = bancomerAPI.TokenService.Create(request);
+            ParameterContainer tokenCreated = new ParameterContainer("token", tokenObj);
+			Assert.IsNotNull(tokenCreated.GetSingleValue("id").ParameterValue);
 
-			Token tokenGet = bancomerAPI.TokenService.Get(tokenCreated.Id);
-			Assert.IsNotNull(tokenGet.Id);
+            Dictionary<String, Object> tokenGet = bancomerAPI.TokenService.Get(tokenCreated.GetSingleValue("id").ParameterValue);
+			Assert.IsNotNull(tokenGet);
 		}
 
 	}
