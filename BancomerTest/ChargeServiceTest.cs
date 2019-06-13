@@ -45,6 +45,13 @@ namespace BancomerTest
 
             Dictionary<String, Object> tokenCreated = bancomerAPI.TokenService.Create(GetTokenRequest());
 
+            ParameterContainer customer = new ParameterContainer("customer");
+            customer.AddValue("name", "John");
+            customer.AddValue("last_name", "Doe");
+            customer.AddValue("email", "johndoe@example.com");
+            customer.AddValue("phone_number", "554-170-3567");
+            customer.ParameterValues;
+
             List<IParameter> request = new List<IParameter> {
                 new SingleParameter("affiliation_bbva", "720931"),
                 new SingleParameter("amount", "200.00"),
@@ -55,7 +62,8 @@ namespace BancomerTest
                 new SingleParameter("use_card_points", "NONE"),
                 new SingleParameter("token", tokenCreated.ToString()),
                 new SingleParameter("currency", "MXN"),
-                new SingleParameter("order_id", "oid-00051")
+                new SingleParameter("order_id", "oid-00051"),
+                customer
             };
 
             Dictionary<String, Object> chargeDictionary = bancomerAPI.ChargeService.Create(request);

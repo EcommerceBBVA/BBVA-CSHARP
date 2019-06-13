@@ -12,8 +12,8 @@ namespace Bancomer
 {
     public class BancomerHttpClient
     {
-        private static readonly string api_endpoint = "https://api.openpay.mx/v1/";
-        private static readonly string api_endpoint_sandbox = "https://sandbox-api.openpay.mx/v1/";
+        private static readonly string api_endpoint = "https://api.ecommercebbva.com/v1/";
+        private static readonly string api_endpoint_sandbox = "https://sand-api.ecommercebbva.com/v1/";
         private static readonly string user_agent = "Bancomer .NET v1";
         private static readonly Encoding encoding = Encoding.UTF8;
         private Boolean _isProduction = false;
