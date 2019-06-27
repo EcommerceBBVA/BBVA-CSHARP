@@ -1,7 +1,7 @@
-![Bancomer NET](http://www.bancomer.mx/img/github/net.jpg)
-[![Build status](https://ci.appveyor.com/api/projects/status/o8ivc5myofhx2kxm)](https://ci.appveyor.com/project/mecoronado/bancomer-dotnet)
+![Bbva NET](http://www.bbva.mx/img/github/net.jpg)
+[![Build status](https://ci.appveyor.com/api/projects/status/o8ivc5myofhx2kxm)](https://ci.appveyor.com/project/mecoronado/bbva-dotnet)
 
-This is a client implementing the payment services for Bancomer at bancomer.mx
+This is a client implementing the payment services for Bbva at bbva.mx
 
 
 Compatibility
@@ -25,33 +25,33 @@ Before use the library will be necessary to set up your Merchant ID and
 Private key. Use:
 
 ```net
-BancomerAPI bancomerAPI = new BancomerAPI(API_KEY, MERCHANT_ID);
+BbvaAPI bbvaAPI = new BbvaAPI(API_KEY, MERCHANT_ID);
 ```
 
 #### Sandbox/Production Mode #####
 
-By convenience and security, the sandbox mode is activated by default in the client library. This allows you to test your own code when implementing Bancomer, before charging any credit card in production environment. Once you have finished your integration, create BancomerAPI object like this:
+By convenience and security, the sandbox mode is activated by default in the client library. This allows you to test your own code when implementing Bbva, before charging any credit card in production environment. Once you have finished your integration, create BbvaAPI object like this:
 
 ```cs
 Boolean production = true;
-BancomerAPI bancomerAPI = new BancomerAPI(API_KEY, MERCHANT_ID, production);
+BbvaAPI bbvaAPI = new BbvaAPI(API_KEY, MERCHANT_ID, production);
 ```
 or use Production property:
 ```cs
-BancomerAPI bancomerAPI = new BancomerAPI(API_KEY, MERCHANT_ID);
-bancomerAPI.Production = true;
+BbvaAPI bbvaAPI = new BbvaAPI(API_KEY, MERCHANT_ID);
+bbvaAPI.Production = true;
 ```
 
 #### API Services #####
 
-Once configured the library, you can use it to interact with Bancomer API services. All the API services are properties of the BancomerAPI class.
+Once configured the library, you can use it to interact with Bbva API services. All the API services are properties of the BbvaAPI class.
 
 ```cs
-bancomerAPI.ChargeTokenService
-bancomerAPI.TokenService
+bbvaAPI.ChargeTokenService
+bbvaAPI.TokenService
 ```
 
-Each service has methods to **create**, **get**, **update**, **delete** or **list** resources according to the documetation described on http://docs.bancomer.mx
+Each service has methods to **create**, **get**, **update**, **delete** or **list** resources according to the documetation described on http://docs.bbva.mx
 
 Examples
 ---------
@@ -70,26 +70,26 @@ customer.Address.City = "Queretaro";
 customer.Address.CountryCode = "MX";
 customer.Address.State = "Queretaro";
 
-Customer customerCreated = bancomerAPI.CustomerService.Create(customer);
+Customer customerCreated = bbvaAPI.CustomerService.Create(customer);
 ```
 
 **Get a customer**
 ```cs
 string customer_id = "adyytoegxm6boiusecxm";
-Customer customer = bancomerAPI.CustomerService.Get(customer_id);
+Customer customer = bbvaAPI.CustomerService.Get(customer_id);
 ```   
 **Delete a customer**
 ```cs
 string customer_id = "adyytoegxm6boiusecxm";
-bancomerAPI.CustomerService.Delete(customer.Id);
+bbvaAPI.CustomerService.Delete(customer.Id);
 ``` 
 **Update a customer**
 ```cs
 string customer_id = "adyytoegxm6boiusecxm";
-Customer customer = bancomerAPI.CustomerService.Get(customer_id);
+Customer customer = bbvaAPI.CustomerService.Get(customer_id);
 customer.Name = "My new name";
 
-customer = bancomerAPI.CustomerService.Update(customer);
+customer = bbvaAPI.CustomerService.Update(customer);
 ```
 
 **List customers**
@@ -97,7 +97,7 @@ customer = bancomerAPI.CustomerService.Update(customer);
 SearchParams search = new SearchParams();
 search.Limit = 50;
 
-List<Customer> customers = bancomerAPI.CustomerService.List(search);
+List<Customer> customers = bbvaAPI.CustomerService.List(search);
 ```
 
 #### Charges #####
@@ -119,7 +119,7 @@ List<IParameter> request = new List<IParameter> {
 	new SingleParameter("order_id", "oid-00051")
 };
 
-Charge charge = bancomerAPI.ChargeTokenService.Create(request);
+Charge charge = bbvaAPI.ChargeTokenService.Create(request);
 ```
 Capture a charge
 ```cs
@@ -139,13 +139,13 @@ List<IParameter> request = new List<IParameter> {
 	new SingleParameter("order_id", "oid-00051")
 };
 
-Charge charge = bancomerAPI.ChargeTokenService.Create(request);
+Charge charge = bbvaAPI.ChargeTokenService.Create(request);
 ```
 Refund a charge
 ```cs
 string charge_id = "ttcg5roe2py2bur38cx2";
 
-Charge chargeRefunded = bancomerAPI.ChargeTokenService.Refund(charge.Id, "refund desc");
+Charge chargeRefunded = bbvaAPI.ChargeTokenService.Refund(charge.Id, "refund desc");
 ```
 #### Tokens #####
 Create a token
@@ -158,11 +158,11 @@ List<IParameter> request = new List<IParameter>{
 	new SingleParameter("expiration_year", "20"),
 };
 
-Token tokenCreated = bancomerAPI.TokenService.Create(request);
+Token tokenCreated = bbvaAPI.TokenService.Create(request);
 ```
 Get a token
 ```cs
 String token = 'kqgykn96i7bcs1wwhvgw';
 
-Token tokenGet = bancomerAPI.TokenService.Get(token);
+Token tokenGet = bbvaAPI.TokenService.Get(token);
 ```

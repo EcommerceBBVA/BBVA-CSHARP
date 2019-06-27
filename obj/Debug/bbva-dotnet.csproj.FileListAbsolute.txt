@@ -1,0 +1,14 @@
+C:\codes\bbva-dotnet\obj\Debug\bbva-dotnet.csprojAssemblyReference.cache
+C:\codes\bbva-dotnet\obj\Debug\bbva_dotnet.Properties.Resources.resources
+C:\codes\bbva-dotnet\obj\Debug\bbva-dotnet.csproj.GenerateResource.cache
+C:\codes\bbva-dotnet\obj\Debug\bbva-dotnet.csproj.CoreCompileInputs.cache
+C:\codes\bbva-dotnet\bin\Debug\ClassLibrary.dll
+C:\codes\bbva-dotnet\bin\Debug\ClassLibrary.pdb
+C:\codes\bbva-dotnet\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\codes\bbva-dotnet\bin\Debug\Newtonsoft.Json.dll
+C:\codes\bbva-dotnet\bin\Debug\nunit.framework.dll
+C:\codes\bbva-dotnet\bin\Debug\Newtonsoft.Json.xml
+C:\codes\bbva-dotnet\bin\Debug\nunit.framework.xml
+C:\codes\bbva-dotnet\obj\Debug\bbva-dotnet.csproj.CopyComplete
+C:\codes\bbva-dotnet\obj\Debug\ClassLibrary.dll
+C:\codes\bbva-dotnet\obj\Debug\ClassLibrary.pdb

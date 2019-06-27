@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{742C7F9D-ACAA-4880-AAB3-16351BA630B1}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BbvaNUnitTests/SubscriptionTest.cs">
+    <Files>
+      <File FileName="Bbva/ChargeService.cs" Line="71" Column="28" />
+      <File FileName="BbvaNUnitTests/ChargeTest.cs" Line="1" Column="1" />
+      <File FileName="BbvaNUnitTests/FeeTest.cs" Line="34" Column="1" />
+      <File FileName="Bbva/PayoutReportService.cs" Line="25" Column="77" />
+      <File FileName="Bbva/Entities/Request/PayoutReportDetailSearchParams.cs" Line="24" Column="2" />
+      <File FileName="Bbva/BbvaResourceService.cs" Line="58" Column="64" />
+      <File FileName="Bbva/SubscriptionService.cs" Line="23" Column="44" />
+      <File FileName="BbvaNUnitTests/PayoutReportTest.cs" Line="1" Column="1" />
+      <File FileName="BbvaTest/SubscriptionServiceTest.cs" Line="27" Column="56" />
+      <File FileName="Bbva/Entities/Plan.cs" Line="13" Column="20" />
+      <File FileName="BbvaNUnitTests/SubscriptionTest.cs" Line="89" Column="1" />
+      <File FileName="Bbva/Entities/Subscription.cs" Line="47" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BbvaNUnitTests PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

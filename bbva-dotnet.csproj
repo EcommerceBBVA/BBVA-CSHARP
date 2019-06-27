@@ -1,0 +1,187 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C753BC1-4D6C-49D2-8F8F-1FE4F4F6BBBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>bbva_dotnet</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".DS_Store" />
+    <None Include=".vs\bbva-dotnet\v15\.suo" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="Bbva.userprefs" />
+    <None Include="BbvaNUnitTests\obj\Debug\BbvaNUnitTests.csproj.CoreCompileInputs.cache" />
+    <None Include="BbvaNUnitTests\obj\Debug\BbvaNUnitTests.csprojAssemblyReference.cache" />
+    <None Include="BbvaNUnitTests\obj\Release\BbvaNUnitTests.csproj.CoreCompileInputs.cache" />
+    <None Include="BbvaNUnitTests\obj\Release\BbvaNUnitTests.csprojAssemblyReference.cache" />
+    <None Include="BbvaNUnitTests\packages.config" />
+    <None Include="BbvaTest\.DS_Store" />
+    <None Include="BbvaTest\obj\Debug\BbvaTests.csproj.CoreCompileInputs.cache" />
+    <None Include="BbvaTest\obj\Debug\BbvaTests.csprojAssemblyReference.cache" />
+    <None Include="BbvaTest\obj\Release\BbvaTests.csproj.CoreCompileInputs.cache" />
+    <None Include="BbvaTest\obj\Release\BbvaTests.csprojAssemblyReference.cache" />
+    <None Include="BbvaTest\packages.config" />
+    <None Include="Bbva\obj\Debug\Bbva.csproj.CopyComplete" />
+    <None Include="Bbva\obj\Debug\Bbva.csproj.CoreCompileInputs.cache" />
+    <None Include="Bbva\obj\Debug\Bbva.csprojAssemblyReference.cache" />
+    <None Include="Bbva\obj\Release\Bbva.csproj.CoreCompileInputs.cache" />
+    <None Include="Bbva\obj\Release\Bbva.csprojAssemblyReference.cache" />
+    <None Include="Bbva\packages.config" />
+    <None Include="packages\Newtonsoft.Json.9.0.1\Newtonsoft.Json.9.0.1.nupkg" />
+    <None Include="packages\Newtonsoft.Json.9.0.1\tools\install.ps1" />
+    <None Include="packages\NUnit.2.6.4\NUnit.2.6.4.nupkg" />
+    <None Include="packages\repositories.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BbvaNUnitTests\BbvaNUnitTests.csproj" />
+    <Content Include="BbvaTest\BbvaTests.csproj" />
+    <Content Include="Bbva\Bbva.csproj" />
+    <Content Include="Bbva\bin\Debug\Bbva.dll" />
+    <Content Include="Bbva\bin\Debug\Bbva.pdb" />
+    <Content Include="Bbva\bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="Bbva\bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="Bbva\obj\Debug\Bbva.csproj.FileListAbsolute.txt" />
+    <Content Include="Bbva\obj\Debug\Bbva.dll" />
+    <Content Include="Bbva\obj\Debug\Bbva.pdb" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\NUnit.2.6.4\lib\nunit.framework.dll" />
+    <Content Include="packages\NUnit.2.6.4\lib\nunit.framework.xml" />
+    <Content Include="packages\NUnit.2.6.4\license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BbvaNUnitTests\ChargeTokenTest.cs" />
+    <Compile Include="BbvaNUnitTests\Constants.cs" />
+    <Compile Include="BbvaNUnitTests\TokenTest.cs" />
+    <Compile Include="BbvaTest\ChargeServiceTest.cs" />
+    <Compile Include="BbvaTest\Constants.cs" />
+    <Compile Include="BbvaTest\MerchantServiceTest.cs" />
+    <Compile Include="BbvaTest\Properties\AssemblyInfo.cs" />
+    <Compile Include="BbvaTest\TokensTest.cs" />
+    <Compile Include="Bbva\BbvaAPI.cs" />
+    <Compile Include="Bbva\BbvaException.cs" />
+    <Compile Include="Bbva\BbvaGenericService.cs" />
+    <Compile Include="Bbva\BbvaHttpClient.cs" />
+    <Compile Include="Bbva\BbvaResourceService.cs" />
+    <Compile Include="Bbva\ChargeService.cs" />
+    <Compile Include="Bbva\Entities\Address.cs" />
+    <Compile Include="Bbva\Entities\Affiliation.cs" />
+    <Compile Include="Bbva\Entities\BbvaResourceObject.cs" />
+    <Compile Include="Bbva\Entities\BankAccount.cs" />
+    <Compile Include="Bbva\Entities\Card.cs" />
+    <Compile Include="Bbva\Entities\CardPoints.cs" />
+    <Compile Include="Bbva\Entities\Customer.cs" />
+    <Compile Include="Bbva\Entities\DeferralPayments.cs" />
+    <Compile Include="Bbva\Entities\ExchangeRate.cs" />
+    <Compile Include="Bbva\Entities\JsonObject.cs" />
+    <Compile Include="Bbva\Entities\Merchant.cs" />
+    <Compile Include="Bbva\Entities\PaymentMethod.cs" />
+    <Compile Include="Bbva\Entities\PaymentPlan.cs" />
+    <Compile Include="Bbva\Entities\Request\CaptureRequest.cs" />
+    <Compile Include="Bbva\Entities\Request\ChargeTokenRequest.cs" />
+    <Compile Include="Bbva\Entities\Request\PaginationParams.cs" />
+    <Compile Include="Bbva\Entities\Request\IParameter.cs" />
+    <Compile Include="Bbva\Entities\Request\ParameterContainer.cs" />
+    <Compile Include="Bbva\Entities\Request\RefundRequest.cs" />
+    <Compile Include="Bbva\Entities\Request\SearchParams.cs" />
+    <Compile Include="Bbva\Entities\Request\SingleParameter.cs" />
+    <Compile Include="Bbva\Entities\Request\TokenRequest.cs" />
+    <Compile Include="Bbva\Entities\Store.cs" />
+    <Compile Include="Bbva\Entities\Token.cs" />
+    <Compile Include="Bbva\Entities\Transaction.cs" />
+    <Compile Include="Bbva\Entities\TransactionStatus.cs" />
+    <Compile Include="Bbva\Entities\UseCardPointsType.cs" />
+    <Compile Include="Bbva\MerchantService.cs" />
+    <Compile Include="Bbva\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Bbva\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Bbva\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Bbva\TokenService.cs" />
+    <Compile Include="Bbva\Utils\ParameterBuilder.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BbvaNUnitTests\bin\Debug\" />
+    <Folder Include="BbvaNUnitTests\bin\Release\" />
+    <Folder Include="BbvaNUnitTests\obj\Debug\TempPE\" />
+    <Folder Include="BbvaTest\bin\Debug\" />
+    <Folder Include="BbvaTest\bin\Release\" />
+    <Folder Include="BbvaTest\obj\Debug\TempPE\" />
+    <Folder Include="Bbva\bin\Release\" />
+    <Folder Include="Bbva\obj\Debug\TempPE\" />
+    <Folder Include="Bbva\Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

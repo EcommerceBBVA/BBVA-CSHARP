@@ -1,0 +1,9 @@
+C:\codes\bbva-dotnet\Bbva\bin\Debug\Bbva.dll
+C:\codes\bbva-dotnet\Bbva\bin\Debug\Bbva.pdb
+C:\codes\bbva-dotnet\Bbva\bin\Debug\Newtonsoft.Json.dll
+C:\codes\bbva-dotnet\Bbva\bin\Debug\Newtonsoft.Json.xml
+C:\codes\bbva-dotnet\Bbva\obj\Debug\Bbva.csprojAssemblyReference.cache
+C:\codes\bbva-dotnet\Bbva\obj\Debug\Bbva.csproj.CoreCompileInputs.cache
+C:\codes\bbva-dotnet\Bbva\obj\Debug\Bbva.csproj.CopyComplete
+C:\codes\bbva-dotnet\Bbva\obj\Debug\Bbva.dll
+C:\codes\bbva-dotnet\Bbva\obj\Debug\Bbva.pdb

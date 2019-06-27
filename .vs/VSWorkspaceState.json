@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Bancomer"
+    "\\Bbva"
   ],
-  "SelectedNode": "\\Bancomer\\BancomerHttpClient.cs",
+  "SelectedNode": "\\Bbva\\BbvaHttpClient.cs",
   "PreviewInSolutionExplorer": false
 }

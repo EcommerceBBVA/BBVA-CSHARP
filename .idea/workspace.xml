@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4f194c08-0459-4526-b6f4-f1208b4ddefa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/bancomer-dotnet/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/bbva-dotnet/DesignTimeBuild/.dtbcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/bancomer-dotnet/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/bbva-dotnet/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/bancomer-dotnet/v15/Server/sqlite3/db.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/bbva-dotnet/v15/Server/sqlite3/db.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/bancomer-dotnet/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/bbva-dotnet/v15/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/bancomer-dotnet/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/bbva-dotnet/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/bancomer-dotnet/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/bbva-dotnet/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer.userprefs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva.userprefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Bancomer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Bbva.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/BancomerAPI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/BbvaAPI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/BancomerException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/BbvaException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/BancomerGenericService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/BbvaGenericService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/BancomerHttpClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/BbvaHttpClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/BancomerResourceService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/BbvaResourceService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/ChargeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/ChargeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Address.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Address.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Affiliation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Affiliation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/BancomerResourceObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/BbvaResourceObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/BankAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/BankAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/CardPoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/CardPoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/DeferralPayments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/DeferralPayments.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/ExchangeRate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/ExchangeRate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/JsonObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/JsonObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Merchant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Merchant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/PaymentMethod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/PaymentMethod.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/PaymentPlan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/PaymentPlan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/CaptureRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/CaptureRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/ChargeRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/ChargeRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/ChargeTokenRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/ChargeTokenRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/IParameter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/IParameter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/PaginationParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/PaginationParams.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/ParameterContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/ParameterContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/RefundRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/RefundRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/SearchParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/SearchParams.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/SingleParameter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/SingleParameter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Request/TokenRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Request/TokenRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Store.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Store.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Token.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Token.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/Transaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/TransactionStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/TransactionStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Entities/UseCardPointsType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Entities/UseCardPointsType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/MerchantService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/MerchantService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/TokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/Utils/ParameterBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/Utils/ParameterBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/bin/Debug/Bancomer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/bin/Debug/Bbva.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/bin/Debug/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/bin/Debug/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/bin/Debug/Newtonsoft.Json.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/bin/Debug/Newtonsoft.Json.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Debug/Bancomer.csproj.CopyComplete" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Debug/Bbva.csproj.CopyComplete" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Debug/Bancomer.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Debug/Bbva.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Debug/Bancomer.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Debug/Bbva.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Debug/Bancomer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Debug/Bbva.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Debug/Bancomer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Debug/Bbva.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Release/Bancomer.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Release/Bbva.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/obj/Release/Bancomer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/obj/Release/Bbva.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bancomer/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Bbva/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/BancomerNUnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/BbvaNUnitTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/ChargeTokenTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/ChargeTokenTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/TokenTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/TokenTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/obj/Debug/BancomerNUnitTests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/obj/Debug/BbvaNUnitTests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/obj/Debug/BancomerNUnitTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/obj/Debug/BbvaNUnitTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/obj/Release/BancomerNUnitTests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/obj/Release/BbvaNUnitTests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/obj/Release/BancomerNUnitTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/obj/Release/BbvaNUnitTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerNUnitTests/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaNUnitTests/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/BancomerTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/BbvaTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/ChargeServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/ChargeServiceTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/MerchantServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/MerchantServiceTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/TokensTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/TokensTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/obj/Debug/BancomerTests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/obj/Debug/BbvaTests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/obj/Debug/BancomerTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/obj/Debug/BbvaTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/obj/Release/BancomerTests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/obj/Release/BbvaTests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/obj/Release/BancomerTests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/obj/Release/BbvaTests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancomerTest/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/BbvaTest/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bancomer-dotnet.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/bbva-dotnet.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bancomer-dotnet.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/bbva-dotnet.csproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bancomer-dotnet.sln" beforeDir="false" afterPath="$PROJECT_DIR$/bbva-dotnet.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/bancomer-dotnet.csproj.CopyComplete" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/bbva-dotnet.csproj.CopyComplete" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/bancomer-dotnet.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/bbva-dotnet.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/bancomer-dotnet.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/bbva-dotnet.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/bancomer-dotnet.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/bbva-dotnet.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/bancomer-dotnet.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/bbva-dotnet.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/bancomer_dotnet.Properties.Resources.resources" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/bbva_dotnet.Properties.Resources.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Release/bancomer-dotnet.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Release/bbva-dotnet.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Release/bancomer-dotnet.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Release/bbva-dotnet.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/repositories.config" beforeDir="false" afterPath="$PROJECT_DIR$/packages/repositories.config" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="157" column="8" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>openpay</find>
+      <find>Bancomer</find>
+      <find>bancomer</find>
+      <find>hist</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>Bbva</replace>
+      <replace>bbva</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/BancomerTest/Properties/AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/Bancomer/BancomerHttpClient.cs" />
+        <option value="$PROJECT_DIR$/.gitignore.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/BBVA-CSHARP.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1440" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BBVA-CSHARP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBVA-CSHARP" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4f194c08-0459-4526-b6f4-f1208b4ddefa" name="Default Changelist" comment="" />
+      <created>1560470216615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560470216615</updated>
+      <workItem from="1560470217893" duration="75000" />
+      <workItem from="1561593896411" duration="226000" />
+      <workItem from="1561651677979" duration="1198000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1499000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1875" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Learn" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3297769" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-1945" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="157" column="8" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
