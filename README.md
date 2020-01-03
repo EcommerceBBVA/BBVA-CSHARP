@@ -55,51 +55,6 @@ Each service has methods to **create**, **get**, **update**, **delete** or **lis
 
 Examples
 ---------
-#### Customers #####
-
-**Create a customer**
-```cs
-Customer customer = new Customer();
-customer.Name = "Net Client";
-customer.LastName = "C#";
-customer.Email = "net@c.com";
-customer.Address = new Address();
-customer.Address.Line1 = "line 1";
-customer.Address.PostalCode = "12355";
-customer.Address.City = "Queretaro";
-customer.Address.CountryCode = "MX";
-customer.Address.State = "Queretaro";
-
-Customer customerCreated = bbvaAPI.CustomerService.Create(customer);
-```
-
-**Get a customer**
-```cs
-string customer_id = "adyytoegxm6boiusecxm";
-Customer customer = bbvaAPI.CustomerService.Get(customer_id);
-```   
-**Delete a customer**
-```cs
-string customer_id = "adyytoegxm6boiusecxm";
-bbvaAPI.CustomerService.Delete(customer.Id);
-``` 
-**Update a customer**
-```cs
-string customer_id = "adyytoegxm6boiusecxm";
-Customer customer = bbvaAPI.CustomerService.Get(customer_id);
-customer.Name = "My new name";
-
-customer = bbvaAPI.CustomerService.Update(customer);
-```
-
-**List customers**
-```cs  
-SearchParams search = new SearchParams();
-search.Limit = 50;
-
-List<Customer> customers = bbvaAPI.CustomerService.List(search);
-```
-
 #### Charges #####
 Create a charge
 ```cs
