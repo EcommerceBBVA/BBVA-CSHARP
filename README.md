@@ -58,66 +58,25 @@ Examples
 #### Charges #####
 Create a charge
 ```cs
+BbvaAPI api = new BbvaAPI("sk_326c6d0443f6457aae29ffbd48f7d1be", "mptdggroasfcmqs8plpy");
 
-String token = 'kqgykn96i7bcs1wwhvgw';
+ParameterContainer customer = new ParameterContainer("customer");
+    customer.AddValue("name", "Juan");
+    customer.AddValue("last_name", "Vazquez Juarez");
+    customer.AddValue("email", "juan.vazquez@empresa.com.mx");
+    customer.AddValue("phone_number", "554-170-3567");
 
-List<IParameter> request = new List<IParameter> {
-	new SingleParameter("affiliation_bbva", "720931"),
-	new SingleParameter("amount", "200.00"),
-	new SingleParameter("description", "Test Charge"),
-	new SingleParameter("customer_language", "SP"),
-	new SingleParameter("capture", "true"),
-	new SingleParameter("use_3d_secure", "false"),
-	new SingleParameter("use_card_points", "NONE"),
-	new SingleParameter("token", tokenCreated),
-	new SingleParameter("currency", "MXN"),
-	new SingleParameter("order_id", "oid-00051")
-};
+ParameterContainer request = new ParameterContainer("charge");
+    request.AddValue("affiliation_bbva", "781500");
+    request.AddValue("amount", "100.00");
+    request.AddValue("description", "Cargo inicial a mi merchant");
+    request.AddValue("currency", "MXN");
+    request.AddValue("order_id", "oid-00051");
+    request.AddValue("redirect_url", "https://sand-portal.ecommercebbva.com");
+    request.AddMultiValue(customer):
 
-Charge charge = bbvaAPI.ChargeTokenService.Create(request);
+Dictionary<String, Object> chargeDictionary = bbvaAPI.ChargeService.Create(request.ParameterValues);
+ParameterContainer charge = new ParameterContainer("charge", chargeDictionary);
 ```
-Capture a charge
-```cs
 
-String token = 'kqgykn96i7bcs1wwhvgw';
 
-List<IParameter> request = new List<IParameter> {
-	new SingleParameter("affiliation_bbva", "720931"),
-	new SingleParameter("amount", "200.00"),
-	new SingleParameter("description", "Test Charge"),
-	new SingleParameter("customer_language", "SP"),
-	new SingleParameter("capture", "false"), //false indicate that only we want capture the amount
-	new SingleParameter("use_3d_secure", "false"),
-	new SingleParameter("use_card_points", "NONE"),
-	new SingleParameter("token", tokenCreated),
-	new SingleParameter("currency", "MXN"),
-	new SingleParameter("order_id", "oid-00051")
-};
-
-Charge charge = bbvaAPI.ChargeTokenService.Create(request);
-```
-Refund a charge
-```cs
-string charge_id = "ttcg5roe2py2bur38cx2";
-
-Charge chargeRefunded = bbvaAPI.ChargeTokenService.Refund(charge.Id, "refund desc");
-```
-#### Tokens #####
-Create a token
-```cs
-List<IParameter> request = new List<IParameter>{
-	new SingleParameter("holder_nane", "Juan Perez Ramirez"),
-	new SingleParameter("card_number", "4111111111111111"),
-	new SingleParameter("cvv2", "022"),
-	new SingleParameter("expiration_month", "12"),
-	new SingleParameter("expiration_year", "20"),
-};
-
-Token tokenCreated = bbvaAPI.TokenService.Create(request);
-```
-Get a token
-```cs
-String token = 'kqgykn96i7bcs1wwhvgw';
-
-Token tokenGet = bbvaAPI.TokenService.Get(token);
-```
