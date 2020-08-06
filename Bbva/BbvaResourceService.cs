@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace Bbva
 {
@@ -53,16 +54,19 @@ namespace Bbva
             return this.httpClient.Post<R>(ep, obj);
         }
 
-        /*protected R Update(string customer_id, R obj)
-        {
-            //if (id == null)
-            //    throw new ArgumentNullException("The id of the object cannot be null");
-            if (obj == null)
-                throw new ArgumentNullException("Object is null");
-
-            string ep = GetEndPoint(customer_id, id);
-            return this.httpClient.Put<R>(ep, obj);
-        }*/
+        //protected R Update(string customer_id, R obj)
+        //{
+        //    if (obj["id"] == null)
+        //    {
+        //        throw new ArgumentNullException("The id of the object cannot be null");
+        //    }
+        //    if (obj == null)
+        //    {
+        //        throw new ArgumentNullException("Object is null");
+        //    }
+        //    string ep = GetEndPoint(customer_id, obj["id"].ToString());
+        //    return this.httpClient.Put<R>(ep, new JsonObject());
+        //}
 
         protected virtual void Delete(string customer_id, string resource_id)
         {
