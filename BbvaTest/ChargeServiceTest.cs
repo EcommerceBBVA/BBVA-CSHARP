@@ -5,13 +5,15 @@ using Bbva.Entities;
 using Bbva.Entities.Request;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
+using NUnit.Framework;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace BbvaTest
 {
     [TestClass]
     public class ChargeServiceTest
     {
-        [TestMethod]
+        [Test]
         public void TestChargeAndGetToMerchant()
         {
             BbvaAPI bbvaAPI = new BbvaAPI(Constants.API_KEY, Constants.MERCHANT_ID);
@@ -38,7 +40,7 @@ namespace BbvaTest
             Assert.IsNotNull(charge);
         }
         
-        [TestMethod]
+        [Test]
         public void TestChargeToMerchantAndRefund()
         {
             BbvaAPI bbvaAPI = new BbvaAPI(Constants.API_KEY, Constants.MERCHANT_ID);
@@ -50,7 +52,7 @@ namespace BbvaTest
             customer.AddValue("last_name", "Doe");
             customer.AddValue("email", "johndoe@example.com");
             customer.AddValue("phone_number", "554-170-3567");
-            customer.ParameterValues;
+            var customerParameterValues = customer.ParameterValues;
 
             List<IParameter> request = new List<IParameter> {
                 new SingleParameter("affiliation_bbva", "720931"),

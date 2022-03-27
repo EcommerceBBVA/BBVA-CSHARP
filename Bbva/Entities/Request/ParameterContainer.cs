@@ -32,9 +32,11 @@ namespace Bbva.Entities.Request
                 {
                     var value = finalObj.ToObject<Dictionary<String, Object>>();
                     AddMultiValue(new ParameterContainer(item.Key, value));
-                } else
+                }
+                else
                 {
-                    AddValue(item.Key, (String)item.Value);
+                    if (!(item.Value is null))
+                        AddValue(item.Key, item.Value.ToString());
                 }
             }
         }
@@ -46,6 +48,7 @@ namespace Bbva.Entities.Request
                 if (param.GetType().Name.Equals("SingleParameter") && param.ParameterName.Equals(value))
                     return (SingleParameter) param;
             }
+
             return null;
         }
 
@@ -56,6 +59,7 @@ namespace Bbva.Entities.Request
                 if (param.GetType().Name.Equals("ParameterContainer") && param.ParameterName.Equals(value))
                     return (ParameterContainer) param;
             }
+
             return null;
         }
 
