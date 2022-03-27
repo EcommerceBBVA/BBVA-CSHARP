@@ -87,16 +87,16 @@ namespace BbvaNUnitTests
             ParameterContainer token = new ParameterContainer("token", tokenDictionary);
 
             List<IParameter> request = new List<IParameter> {
-                new SingleParameter("affiliation_bbva", "720931"),
+	            new SingleParameter("affiliation_bbva", Constants.AFFILIATION),
                 new SingleParameter("amount", "200.00"),
                 new SingleParameter("description", "Test Charge"),
                 new SingleParameter("customer_language", "SP"),
-                new SingleParameter("capture", "TRUE"),
-                new SingleParameter("use_3d_secure", "FALSE"),
+                new SingleParameter("capture", "true"),
+                new SingleParameter("use_3d_secure", "false"),
                 new SingleParameter("use_card_points", "NONE"),
                 new SingleParameter("token", token.GetSingleValue("id").ParameterValue),
                 new SingleParameter("currency", "MXN"),
-                new SingleParameter("order_id", "oid-00051"),
+                new SingleParameter("order_id", new DateTimeOffset(DateTime.UtcNow).Millisecond.ToString()),
                 GetCustomer()
             };
 
