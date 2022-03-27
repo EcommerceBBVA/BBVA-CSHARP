@@ -21,7 +21,7 @@ namespace BbvaNUnitTests
             ParameterContainer token = new ParameterContainer("token", tokenDictionary);
 
             List<IParameter> request = new List<IParameter> {
-                new SingleParameter("affiliation_bbva", "720931"),
+	            new SingleParameter("affiliation_bbva", Constants.AFFILIATION),
                 new SingleParameter("amount", "200.00"),
                 new SingleParameter("description", "Test Charge"),
                 new SingleParameter("customer_language", "SP"),
@@ -30,7 +30,7 @@ namespace BbvaNUnitTests
                 new SingleParameter("use_card_points", "NONE"),
                 new SingleParameter("token", token.GetSingleValue("id").ParameterValue),
                 new SingleParameter("currency", "MXN"),
-                new SingleParameter("order_id", "oid-00051"),
+                new SingleParameter("order_id", new DateTimeOffset(DateTime.UtcNow).Millisecond.ToString()),
                 GetCustomer()
             };
 
@@ -55,7 +55,7 @@ namespace BbvaNUnitTests
             ParameterContainer token = new ParameterContainer("token", tokenDictionary);
 
             List<IParameter> request = new List<IParameter> {
-                new SingleParameter("affiliation_bbva", "720931"),
+                new SingleParameter("affiliation_bbva", Constants.AFFILIATION),
                 new SingleParameter("amount", "200.00"),
                 new SingleParameter("description", "Test Charge"),
                 new SingleParameter("customer_language", "SP"),
@@ -64,13 +64,15 @@ namespace BbvaNUnitTests
                 new SingleParameter("use_card_points", "NONE"),
                 new SingleParameter("token", token.GetSingleValue("id").ParameterValue),
                 new SingleParameter("currency", "MXN"),
-                new SingleParameter("order_id", "oid-00051"),
+                new SingleParameter("order_id", new DateTimeOffset(DateTime.UtcNow).Millisecond.ToString()),
                 GetCustomer()
             };
 
             Dictionary<String, Object> chargeDictionary = bbvaAPI.ChargeService.Create(request);
+            Console.WriteLine(chargeDictionary);
             ParameterContainer charge = new ParameterContainer("charge", chargeDictionary);
-			Assert.IsNotNull(charge);
+            
+            Assert.IsNotNull(charge);
 		}
 
 		[Test()]
@@ -167,11 +169,11 @@ namespace BbvaNUnitTests
 		private List<IParameter> GetTokenRequest()
 		{
             return new List<IParameter>{
-                new SingleParameter("holder_nane", "Juan Perez Ramirez"),
+                new SingleParameter("holder_name", "Juan Perez Ramirez"),
                 new SingleParameter("card_number", "4111111111111111"),
                 new SingleParameter("cvv2", "022"),
                 new SingleParameter("expiration_month", "12"),
-                new SingleParameter("expiration_year", "20"),
+                new SingleParameter("expiration_year", "25"),
             };
 		}
 

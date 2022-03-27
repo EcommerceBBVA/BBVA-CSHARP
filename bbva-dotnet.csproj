@@ -113,7 +113,6 @@
     <Compile Include="BbvaNUnitTests\ChargeTokenTest.cs" />
     <Compile Include="BbvaNUnitTests\Constants.cs" />
     <Compile Include="BbvaNUnitTests\TokenTest.cs" />
-    <Compile Include="BbvaTest\ChargeServiceTest.cs" />
     <Compile Include="BbvaTest\Constants.cs" />
     <Compile Include="BbvaTest\MerchantServiceTest.cs" />
     <Compile Include="BbvaTest\Properties\AssemblyInfo.cs" />

@@ -19,11 +19,11 @@ namespace BbvaNUnitTests
 			BbvaAPI bbvaAPI = new BbvaAPI(Constants.API_KEY, Constants.MERCHANT_ID);
 
             List<IParameter> request = new List <IParameter>{
-                new SingleParameter("holder_nane", "Juan Perez Ramirez"),
+                new SingleParameter("holder_name", "Juan Perez Ramirez"),
                 new SingleParameter("card_number", "4111111111111111"),
                 new SingleParameter("cvv2", "022"),
                 new SingleParameter("expiration_month", "12"),
-                new SingleParameter("expiration_year", "20"),
+                new SingleParameter("expiration_year", "25"),
             };
 
             Dictionary<String, Object> tokenObj = bbvaAPI.TokenService.Create(request);
