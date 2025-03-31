@@ -58,7 +58,7 @@ Examples
 #### Charges #####
 Create a charge
 ```cs
-BbvaAPI api = new BbvaAPI("***REMOVED***", "mptdggroasfcmqs8plpy");
+BbvaAPI api = new BbvaAPI("sk_xxxxxxxxxxxxxxxxxxxxxx", "mptdggroasfcmqs8plpy");
 
 ParameterContainer customer = new ParameterContainer("customer");
     customer.AddValue("name", "Juan");
